@@ -65,7 +65,7 @@ class HttpHandler(BaseHTTPRequestHandler):
 
 
 def save_data(data):
-    client = MongoClient("mongodb://localhost:27017", server_api=ServerApi('1'))
+    client = MongoClient("mongodb://127.0.0.1:27017", server_api=ServerApi('1'))
     db = client.get_database('homework')
     parse_data = unquote_plus(data.decode())
 
